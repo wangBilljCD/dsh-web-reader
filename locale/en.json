@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Web Reader",
+    "description": "Read JavaScript-rendered pages in full: takes over web_fetch with a real local browser and adds web_read for paginated reading of very long pages."
+  }
+}

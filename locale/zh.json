@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "网页读取器",
+    "description": "完整读取 JS 渲染网页：用本机真实浏览器接管 web_fetch，并提供 web_read 工具分段读超长页面。"
+  }
+}

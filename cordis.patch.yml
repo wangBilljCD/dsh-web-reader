@@ -1,0 +1,16 @@
+# dsh-web-reader bundle layer.
+#
+# 1. 把 web 能力接缝的抓取层换成本插件注册的 'chrome' provider（用本机 Chrome 真实渲染）。
+#    注意：patch 会整体替换目标行的 config，所以这里必须把要保留的键都写全——
+#    searchProvider 保持 dsh-free-search 已经在用的 ddg，避免改动搜索行为。
+# 2. 插入本插件的宿主行（注册 provider + web_read 工具）。
+#
+# bundle 层在下次 profile 启动时加载；其中 entry 的 config 段可通过设置热更新。
+- id: web
+  config:
+    searchProvider: ddg
+    fetchProvider: chrome
+
+- insert:
+    - id: web-reader
+      name: dsh-web-reader
